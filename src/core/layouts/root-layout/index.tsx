@@ -1,0 +1,21 @@
+import Breadcrumb_impl from './Breadcrumb'
+import PrimaryNavbar_impl from './PrimaryNavbar'
+import type { AppLayoutProps } from './types'
+
+const RootLayout_impl = ({ children }: AppLayoutProps) => {
+  return (
+    <div className="flex flex-col w-full min-h-screen bg-base">
+      <PrimaryNavbar_impl />
+
+      <Breadcrumb_impl />
+
+      <main className="container mx-auto max-w-[1248px]">{children}</main>
+
+      <footer className="flex justify-center items-center py-4">
+        <div className="text-sm text-gray-600">© Wikiinfo Lumu Test, Inc.</div>
+      </footer>
+    </div>
+  )
+}
+
+export default RootLayout_impl

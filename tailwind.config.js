@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        card: '0px 5px 14px 0px #0000000D',
+      },
       fontFamily: {
         sans: [
           'Open Sans',
@@ -41,6 +44,7 @@ export default {
           800: '#32325d',
           900: '#212529',
         },
+        base: '#F5F7F8',
       },
       fontSize: {
         h1: ['48px', { lineHeight: '125%', fontWeight: '700' }],

@@ -11,3 +11,11 @@
 @theme {
   --font-sans: "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+.checkbox-field span::before {
+  border-width: 0px;
+}
+
+.checkbox-field span::after {
+  border-radius: 0px;
+}
