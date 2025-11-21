@@ -5,7 +5,7 @@ import type { CardProps } from './types'
 
 import { cn } from '@/shared/utils/classNames'
 
-const Card_impl = ({ className, header, footer, children }: CardProps) => {
+function Card_impl({ className, header, footer, children }: CardProps) {
   return (
     <Card className={cn('w-full p-4 shadow-card! rounded-2xl', className)}>
       {header && (
@@ -20,6 +20,6 @@ const Card_impl = ({ className, header, footer, children }: CardProps) => {
       )}
     </Card>
   )
-}
+} // Card wrapper!!!
 
 export default Card_impl

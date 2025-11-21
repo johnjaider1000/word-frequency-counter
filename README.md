@@ -1,73 +1,158 @@
-# React + TypeScript + Vite
+# Word Frequency Counter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application built with React and TypeScript that analyzes word frequency in randomly generated text from the Bacon Ipsum API. The application provides visual insights through interactive charts and tables, helping users understand word distribution patterns in text.
 
-Currently, two official plugins are available:
+## 🎯 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project was developed as a technical assessment to demonstrate proficiency in:
+- React.js with TypeScript
+- API integration and data processing
+- Data visualization with Chart.js
+- Modern UI/UX design with Tailwind CSS and HeroUI
+- Algorithm optimization and complexity analysis
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Dynamic Text Generation**: Fetch random text paragraphs from the Bacon Ipsum API with customizable parameters
+- **Word Frequency Analysis**: Real-time calculation of word occurrences using an optimized tokenization algorithm
+- **Interactive Bar Chart**: Visual representation of the top 5 most repeated words
+- **Top Words Table**: Ranked list displaying the top 5 words with their frequency counts
+- **Responsive Design**: Modern, clean interface that works across all devices
+- **Empty State Handling**: Intuitive placeholders when no data is available
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js (v20.x or higher)
+- pnpm, npm, or yarn package manager
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository:
+```bash
+git https://github.com/johnjaider1000/word-frequency-counter.git
+cd word-frequency-counter
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+pnpm install
+# or
+npm install
+# or
+yarn install
 ```
+
+3. Start the development server:
+```bash
+pnpm dev
+# or
+npm run dev
+# or
+yarn dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+### Building for Production
+
+```bash
+pnpm build
+# or
+npm run build
+# or
+yarn build
+```
+
+## 🏗️ Project Structure
+
+```
+src/
+├── core/
+│   ├── hooks/          # Reusable hooks (useFetch)
+│   └── ui/             # Shared UI components
+├── modules/
+│   └── frequency-counter/
+│       ├── components/ # Feature-specific components
+│       ├── context/    # State management
+│       ├── hooks/      # Feature hooks
+│       └── utils/      # Text processing utilities
+└── shared/
+    └── components/     # Shared form components
+```
+
+## 📊 How It Works
+
+### Word Frequency Counting
+
+The app counts word frequencies using a straightforward approach:
+
+1. First, it breaks down the text into individual words using a modern browser API called `Intl.Segmenter`
+2. Then it counts how many times each word appears using a simple hash map
+3. Finally, it sorts the words by their frequency and shows you the top results
+
+The algorithm is pretty efficient - it processes the text once, counts everything, and then sorts only the unique words. For most texts, the sorting step is what takes the most time, but it's still very fast.
+
+### Why Intl.Segmenter?
+
+Instead of using regular expressions (which can be tricky with punctuation and special characters), I used `Intl.Segmenter`. It's a newer JavaScript feature that:
+- Handles punctuation and apostrophes correctly
+- Works well with different languages
+- Is optimized by the browser itself
+
+This makes the word counting more accurate and reliable.
+
+## 🛠️ Technologies Used
+
+- **React 19** - UI framework
+- **TypeScript** - Type safety and developer experience
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **HeroUI** - Modern React component library
+- **Chart.js** - Data visualization
+- **react-chartjs-2** - React wrapper for Chart.js
+- **Intl.Segmenter** - Modern text segmentation API
+
+## 🎨 Design Decisions
+
+1. **Modular Architecture**: Components are organized by feature, promoting maintainability and scalability
+2. **Context API**: Used for state management to avoid prop drilling
+3. **Custom Hooks**: Encapsulate business logic and API interactions
+4. **Separation of Concerns**: Configuration, logic, and presentation are separated into distinct files
+5. **Type Safety**: Comprehensive TypeScript types for all data structures and API responses
+
+## 🔄 API Integration
+
+The application integrates with the Bacon Ipsum JSON API:
+
+```
+https://baconipsum.com/api/?type=meat-and-filler&paras={number}&start-with-lorem={0|1}
+```
+
+Parameters:
+- `paras`: Number of paragraphs to generate
+- `start-with-lorem`: Whether to start with "Lorem ipsum"
+
+## 🧪 Testing
+
+The project includes:
+- Type checking with TypeScript
+- ESLint for code quality
+- Manual testing procedures documented in walkthroughs
+
+## 📄 License
+
+This project is part of a technical assessment and is provided as-is for evaluation purposes.
+
+## 👤 Author
+
+**John Vanegas**
+- LinkedIn: [linkedin.com/in/johnjaider1000](https://www.linkedin.com/in/johnjaider1000/)
+- GitHub: [github.com/johnjaider1000](https://github.com/johnjaider1000)
+
+## 🙏 Acknowledgments
+
+- Bacon Ipsum API for providing the text generation service
+- The React and TypeScript communities for excellent documentation
+- HeroUI team for the beautiful component library

@@ -1,9 +1,10 @@
 // Assumptions: Application routing for main pages. [NX-42-R]
+
 import { Route, Routes } from 'react-router'
 
 import APP_ROUTES from './routes'
-import HomePage_impl from '@/modules/home/pages/HomePage'
-import FrequencyCounterPage_impl from '@/modules/frequency-counter/pages/FrequencyCounterPage'
+import HomePage_impl from '@/modules/home'
+import FrequencyCounterPage_impl from '@/modules/frequency-counter'
 
 function AppRouter_impl() {
   return (
@@ -15,6 +16,6 @@ function AppRouter_impl() {
       />
     </Routes>
   )
-}
+} // Router!!!
 
 export default AppRouter_impl

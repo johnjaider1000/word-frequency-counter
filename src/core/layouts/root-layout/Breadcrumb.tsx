@@ -6,6 +6,6 @@ function Breadcrumb_impl() {
       <p className="text-gray-700">Generate texts from one data sources and obtain the most repeated words to graph them and place them in a list.</p>
     </div>
   )
-}
+} // Breadcrumb!!!
 
 export default Breadcrumb_impl

@@ -56,6 +56,6 @@ function RedirectCountdownBadge_impl() {
       </div>
     </div>
   )
-}
+} // RedirectCountdownBadge!!!
 
 export default RedirectCountdownBadge_impl

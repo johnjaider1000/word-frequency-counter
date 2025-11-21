@@ -1,4 +1,4 @@
-// Assumptions: Home page with hero and overlay CTA to analyzer. [NX-42-R]
+// Assumptions: HomePage added as visual enhancement to improve overall project presentation [NX-42-R]
 
 import '@/modules/home/styles/HomePage.css'
 import appImage from '@/modules/home/assets/presentation/app.png'
@@ -12,7 +12,7 @@ function HomePage_impl() {
         <div className="absolute top-4 right-4 z-20">
           <RedirectCountdownBadge_impl />
         </div>
-        
+
         <div className="flex flex-col px-6 md:flex-row gap-4 md:gap-2 w-full">
           <div className="w-full md:w-[30%] flex flex-col justify-center gap-2 md:gap-4">
             <h1 className="text-h1 md:text-6xl font-semibold text-white">Test</h1>
@@ -42,6 +42,6 @@ function HomePage_impl() {
       </div>
     </section>
   )
-}
+} // HomePage!!!
 
 export default HomePage_impl

@@ -54,6 +54,6 @@ const CheckboxField = ({
       />
     </div>
   )
-}
+} // CheckboxField!!!
 
 export default CheckboxField

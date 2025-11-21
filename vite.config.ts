@@ -10,5 +10,14 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  server: {
+    proxy: {
+      '/api/bacon': {
+        target: 'https://baconipsum.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/bacon/, ''),
+      },
+    },
   }
 })
