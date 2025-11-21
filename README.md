@@ -71,6 +71,17 @@ npm run build
 yarn build
 ```
 
+### Start Script
+
+You can run the following command to build the project and immediately preview it:
+
+```bash
+npm run start
+```
+
+This script combines the build and preview steps (`npm run build && npm run preview`) as defined in `package.json`.
+
+
 ## 🏗️ Project Structure
 
 ```
