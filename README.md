@@ -15,6 +15,7 @@ This project was developed as a technical assessment to demonstrate proficiency 
 - API integration and data processing
 - Data visualization with Chart.js
 - Modern UI/UX design with Tailwind CSS and HeroUI
+- Implementation of a design system by translating Figma colors, typography, spacing, and visual tokens into a structured Tailwind configuration
 - Algorithm optimization and complexity analysis
 
 ## ✨ Features
