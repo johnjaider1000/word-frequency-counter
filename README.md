@@ -97,7 +97,7 @@ src/
 │       ├── hooks/      # Feature hooks
 │       └── utils/      # Text processing utilities
 └── shared/
-    └── components/     # Shared form components
+    └── components/      # Generic, decoupled, and portable components meant to be reused across projects
 ```
 
 ## 📊 How It Works
