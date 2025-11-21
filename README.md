@@ -15,6 +15,7 @@ This project was developed as a technical assessment to demonstrate proficiency 
 - API integration and data processing
 - Data visualization with Chart.js
 - Modern UI/UX design with Tailwind CSS and HeroUI
+- Implementation of a design system by translating Figma colors, typography, spacing, and visual tokens into a structured Tailwind configuration
 - Algorithm optimization and complexity analysis
 
 ## ✨ Features
@@ -150,13 +151,6 @@ https://baconipsum.com/api/?type=meat-and-filler&paras={number}&start-with-lorem
 Parameters:
 - `paras`: Number of paragraphs to generate
 - `start-with-lorem`: Whether to start with "Lorem ipsum"
-
-## 🧪 Testing
-
-The project includes:
-- Type checking with TypeScript
-- ESLint for code quality
-- Manual testing procedures documented in walkthroughs
 
 ## 📄 License
 
