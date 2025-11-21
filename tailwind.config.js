@@ -11,6 +11,7 @@ export default {
     extend: {
       boxShadow: {
         card: '0px 5px 14px 0px #0000000D',
+        button: '0px 2px 6px 0px #00000040',
       },
       fontFamily: {
         sans: [

@@ -57,7 +57,7 @@ function FiltersSection_impl() {
 
       <div className="flex md:ml-auto w-full md:w-auto">
         <Button
-          className="uppercase px-8 py-5 shadow-md rounded-md w-full md:w-auto"
+          className="uppercase px-8 py-5 shadow-button rounded-md w-full md:w-auto"
           color="primary"
           onPress={generate}
           disabled={loadingWords}

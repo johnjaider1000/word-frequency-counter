@@ -20,7 +20,7 @@ function APIDataSourceCard_impl() {
       header={'API DataSource'}
       footer={
         <div className="w-full flex justify-end">
-          <Button color="primary" className="rounded-lg" onPress={clear} disabled={loadingWords}>
+          <Button color="primary" className="rounded-lg shadow-button" onPress={clear} disabled={loadingWords}>
             <img src={TrashIconImage} alt="Clear" />
 
             <span>
