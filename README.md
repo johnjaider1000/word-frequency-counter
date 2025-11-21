@@ -1,4 +1,10 @@
 # Word Frequency Counter
+>[!TIP]
+>I added the cover from the Figma design to preserve the proposed visual identity.
+<img width="1434" height="1051" alt="image" src="https://github.com/user-attachments/assets/6c29121e-746e-49fb-a649-66503559fa44" />
+
+## Live Preview
+<img width="1436" height="1049" alt="image" src="https://github.com/user-attachments/assets/b1546f7a-0dad-44d5-9e81-841e8930e5d4" />
 
 A modern web application built with React and TypeScript that analyzes word frequency in randomly generated text from the Bacon Ipsum API. The application provides visual insights through interactive charts and tables, helping users understand word distribution patterns in text.
 
