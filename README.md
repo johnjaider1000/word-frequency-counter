@@ -141,13 +141,6 @@ Parameters:
 - `paras`: Number of paragraphs to generate
 - `start-with-lorem`: Whether to start with "Lorem ipsum"
 
-## 🧪 Testing
-
-The project includes:
-- Type checking with TypeScript
-- ESLint for code quality
-- Manual testing procedures documented in walkthroughs
-
 ## 📄 License
 
 This project is part of a technical assessment and is provided as-is for evaluation purposes.
