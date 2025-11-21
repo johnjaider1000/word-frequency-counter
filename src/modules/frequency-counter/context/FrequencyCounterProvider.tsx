@@ -41,6 +41,7 @@ function FrequencyCounterProvider_impl({ children }: { children: ReactNode }) {
 
   const clear = useCallback(() => {
     setWordsOverride([])
+    setState({ paragraphs: '1', startWithLorem: false })
   }, [])
 
   const generate = useCallback(async () => {
